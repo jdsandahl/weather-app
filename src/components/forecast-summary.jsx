@@ -3,13 +3,18 @@ import PropTypes from "prop-types";
 
 const ForecastSummary = (props) => (
   <div>
-    <span className="date">{`${props.date}`}</span>
-
-    <span className="icon">{`${props.icon}`}</span>
-
-    <span className="temperature">{`${props.temperature}`}</span>
-
-    <span className="description">{`${props.description}`}</span>
+    <div className="date">
+      <span className="date">{`${props.date}`}</span>
+    </div>
+    <div className="icon">
+      <span className="icon">{`${props.icon}`}</span>
+    </div>
+    <div className="temperature">
+      <span className="temperature">{`${props.temperature}°C`}</span>
+    </div>
+    <div className="description">
+      <span className="description">{`${props.description}`}</span>
+    </div>
   </div>
 );
 
