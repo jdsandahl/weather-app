@@ -1,13 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import LocationDetails from "./location-details";
-import { render } from "react-dom";
+import ForecastSummaries from "./forecast-summaries";
 
 const App = (props) => (
-  <LocationDetails
-    city={props.location.city}
-    country={props.location.country}
-  />
+  <div className="forecast">
+    <LocationDetails
+      city={props.location.city}
+      country={props.location.country}
+    />
+
+    <ForecastSummaries forecasts={props.forecasts} />
+  </div>
 );
 
 App.propTypes = {
@@ -15,6 +19,16 @@ App.propTypes = {
     city: PropTypes.string,
     country: PropTypes.string,
   }).isRequired,
+
+  forecasts: PropTypes.array.isRequired,
+
+  /*forecasts: PropTypes.shape({
+    date: PropTypes.number,
+    temperature: PropTypes.object,
+    description: PropTypes.string,
+    icon: PropTypes.string,
+  }).isRequired,*/
+
 };
 
 export default App;
