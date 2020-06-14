@@ -2,18 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ForecastSummary = (props) => (
-  <div>
-    <div className="date">
-      <span className="date">{`${props.date}`}</span>
+  <div className="forecast-summary">
+    <div>
+      <span className="date">{props.date}</span>
     </div>
-    <div className="icon">
-      <span className="icon">{`${props.icon}`}</span>
+    <div>
+      <span className="icon">{props.icon}</span>
     </div>
-    <div className="temperature">
-      <span className="temperature">{`${props.temperature}°C`}</span>
+    <div>
+      <span className="temperature">{props.temperature}&deg;C</span>
     </div>
-    <div className="description">
-      <span className="description">{`${props.description}`}</span>
+    <div>
+      <span className="description">{props.description}</span>
     </div>
   </div>
 );
