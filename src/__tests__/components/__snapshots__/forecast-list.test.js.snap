@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastList renders correctly to match ForecastList snapshot 1`] = `[Function]`;
