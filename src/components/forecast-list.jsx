@@ -1,6 +1,8 @@
 import React from "react";
 import ForecastSummary from "./forecast-summary";
 
+import '../styles/forecast-list.css';
+
 const ForecastList = (props) => (
   <div className="forecast-list">
     {props.forecasts.map((forecast) => (
