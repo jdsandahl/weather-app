@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import LocationDetails from "./location-details";
-import ForecastSummaries from "./forecast-summaries";
+import ForecastList from "./forecast-list";
+
+import '../styles/app.css';
 
 const App = (props) => (
   <div className="forecast">
@@ -10,7 +12,7 @@ const App = (props) => (
       country={props.location.country}
     />
 
-    <ForecastSummaries forecasts={props.forecasts} />
+    <ForecastList forecasts={props.forecasts} />
   </div>
 );
 
@@ -21,14 +23,6 @@ App.propTypes = {
   }).isRequired,
 
   forecasts: PropTypes.array.isRequired,
-
-  /*forecasts: PropTypes.shape({
-    date: PropTypes.number,
-    temperature: PropTypes.object,
-    description: PropTypes.string,
-    icon: PropTypes.string,
-  }).isRequired,*/
-
 };
 
 export default App;

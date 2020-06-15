@@ -1,8 +1,8 @@
 import React from "react";
 import ForecastSummary from "./forecast-summary";
 
-const ForecastSummaries = (props) => (
-  <div className="forecast-summaries">
+const ForecastList = (props) => (
+  <div className="forecast-list">
     {props.forecasts.map((forecast) => (
       <ForecastSummary
         key={forecast.date}
@@ -15,4 +15,4 @@ const ForecastSummaries = (props) => (
   </div>
 );
 
-export default ForecastSummaries;
+export default ForecastList;
