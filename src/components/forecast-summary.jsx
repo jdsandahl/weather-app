@@ -4,19 +4,20 @@ import PropTypes from "prop-types";
 const ForecastSummary = (props) => (
   <div className="forecast-summary">
     <div>
-      <span className="date">{props.date}</span>
+      <span className="date" data-testid="date-id">{props.date}</span>
     </div>
     <div>
-      <span className="icon">{props.icon}</span>
+      <span className="icon" data-testid="icon-id">{props.icon}</span>
     </div>
     <div>
-      <span className="temperature">{props.temperature}&deg;C</span>
+      <span className="temperature" data-testid="temperature-id">{props.temperature}&deg;C</span>
     </div>
     <div>
-      <span className="description">{props.description}</span>
+      <span className="description" data-testid="description-id">{props.description}</span>
     </div>
   </div>
 );
+
 
 ForecastSummary.propTypes = {
   forecasts: PropTypes.shape({

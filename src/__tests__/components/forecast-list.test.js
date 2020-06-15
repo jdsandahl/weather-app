@@ -1,6 +1,7 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
 import ForecastList from '../../components/forecast-list';
+import ForecastSummary from '../../components/forecast-summary';
 
 const forecasts = [
     {
@@ -49,7 +50,12 @@ describe("ForecastList", () => {
         expect(asFragment).toMatchSnapshot();
     });
 
-    xit("renders the correct amount of ForecastSummary component props", () => {
+    it("renders the correct amount of ForecastSummary component props", () => {
+        const { getAllByTestId } = render (<ForecastList forecasts={ forecasts } />);
 
+        expect(getAllByTestId("date-id")).toHaveLength(2);
+        expect(getAllByTestId("icon-id")).toHaveLength(2);
+        expect(getAllByTestId("temperature-id")).toHaveLength(2);
+        expect(getAllByTestId("description-id")).toHaveLength(2);
     });
 });
