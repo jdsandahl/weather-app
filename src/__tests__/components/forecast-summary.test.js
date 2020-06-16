@@ -12,7 +12,7 @@ describe ("ForecastSummary", () => {
                 date={123456}
                 temperature="mockTemperature"
                 description="mockDescription"
-                icon="mockIcon"
+                icon="200"
             />
         );
 
@@ -20,18 +20,18 @@ describe ("ForecastSummary", () => {
     });
 
     it('renders the correct props', () => {
-        const { getByText } = render(
+        const { getByTestId } = render(
             <ForecastSummary 
                 date={123456}
                 temperature="mockTemperature"
                 description="mockDescription"
-                icon="mockIcon"
+                icon="200"
             />
         );
 
-        expect(getByText("123456")).toHaveClass("date");
-        expect(getByText("mockTemperature°C")).toHaveClass("temperature");
-        expect(getByText("mockDescription")).toHaveClass("description");
-        expect(getByText("mockIcon")).toHaveClass("icon");    
+        expect(getByTestId("date-id")).toHaveClass("date");
+        expect(getByTestId("temperature-id")).toHaveClass("temperature");
+        expect(getByTestId("description-id")).toHaveClass("description");
+        expect(getByTestId("icon-id")).toHaveClass("icon");    
     });
 });
