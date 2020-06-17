@@ -13,7 +13,7 @@ const ForecastSummary = (props) => (
       <WeatherIcon name="owm" iconId={props.icon} />
     </div>
     <div className="temperature" data-testid="temperature-id">
-      <span>{props.temperature}&deg;C</span>
+      <span>{props.temperature}&deg;c</span>
     </div>
     <div className="description" data-testid="description-id">
       <span>{props.description}</span>
