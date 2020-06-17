@@ -4,6 +4,7 @@ import LocationDetails from "./location-details";
 import ForecastList from "./forecast-list";
 
 import '../styles/app.css';
+import ForecastDetails from "./forecast-details";
 
 const App = (props) => (
   <div className="forecast">
@@ -13,6 +14,8 @@ const App = (props) => (
     />
 
     <ForecastList forecasts={props.forecasts} />
+
+    <ForecastDetails forecasts={props.forecasts[0]} />
   </div>
 );
 
