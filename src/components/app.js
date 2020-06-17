@@ -1,23 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import PropTypes from "prop-types";
 import LocationDetails from "./location-details";
 import ForecastList from "./forecast-list";
 
-import '../styles/app.css';
+import "../styles/app.css";
 import ForecastDetails from "./forecast-details";
 
-const App = (props) => (
-  <div className="forecast">
-    <LocationDetails
-      city={props.location.city}
-      country={props.location.country}
-    />
+const App = props => {
+  const [selectedDate, setSelectedDate] = useState(props.forecasts[0].date);
 
-    <ForecastList forecasts={props.forecasts} />
+  const selectedForecast = props.forecasts.find(forecast => forecast.date === selectedDate);
+  
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
 
-    <ForecastDetails forecasts={props.forecasts[0]} />
-  </div>
-);
+  return (
+    <div className="forecast">
+      <LocationDetails
+        city={props.location.city}
+        country={props.location.country}
+      />
+      <ForecastList forecasts={props.forecasts} onForecastSelect={handleForecastSelect} />
+      <ForecastDetails forecasts={selectedForecast} />
+    </div>
+  );
+}
 
 App.propTypes = {
   location: PropTypes.shape({

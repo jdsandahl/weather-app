@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import ForecastSummary from "./forecast-summary";
 
 import '../styles/forecast-list.css';
@@ -12,9 +13,14 @@ const ForecastList = (props) => (
         description={forecast.description}
         icon={forecast.icon}
         temperature={forecast.temperature.max}
+        onSelect={props.onForecastSelect}
       />
     ))}
   </div>
 );
+
+ForecastList.propTypes = {
+  forecasts: PropTypes.array.isRequired,
+};
 
 export default ForecastList;
