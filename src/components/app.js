@@ -27,6 +27,17 @@ const App = props => {
     .then((response) => {
       setForecasts(response.data.forecasts);
       setLocation(response.data.location);
+    })
+    .catch((err) => {
+      if (err.response){
+      alert(`${err.message}: The city entered could not be found.`);
+      }
+      else if (err.request){
+        console.log('Error', err.message);
+      }
+      else {
+        console.log('Error', err.message);
+      }
     });
   };
 
