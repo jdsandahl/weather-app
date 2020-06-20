@@ -13,7 +13,7 @@ exports[`ForecastList renders correctly to match ForecastList snapshot 1`] = `
         data-testid="date-id"
       >
         <span>
-          Thu 1st Jan
+          Fri 2nd Jan
         </span>
       </div>
       <div
