@@ -13,18 +13,23 @@ const SearchForm = (props) => {
 
   return (
     <div className="search-form">
+      <div className="search-instruction">
+        <p className="">Check a different city:</p>
+      </div>
       <input
         type="text"
         value={searchText}
         onChange={handleInputChange}
       ></input>
-      <button type="submit" onClick={() => props.onCitySearch(searchText)}>Search</button>
+      <button type="submit" onClick={() => props.onCitySearch(searchText)}>
+        Search
+      </button>
     </div>
   );
 };
 
 SearchForm.propTypes = {
-    onCitySearch: PropTypes.func.isRequired,
+  onCitySearch: PropTypes.func.isRequired,
 };
 
 export default SearchForm;

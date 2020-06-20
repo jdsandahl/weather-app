@@ -3,5 +3,15 @@
     margin-bottom: 20px;
 
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-end; 
+    align-items: center;   
+}
+
+.search-instruction {
+    flex: 1 0 auto;
+    text-align: end;
+    padding: 10px;
+    color: orange;
+    
 }
