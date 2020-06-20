@@ -8,7 +8,6 @@ const SearchForm = (props) => {
 
   const handleInputChange = (event) => {
     setSearchText(event.target.value);
-    console.log(event.target.value);
   };
 
   return (
@@ -20,7 +19,7 @@ const SearchForm = (props) => {
         type="text"
         value={searchText}
         onChange={handleInputChange}
-      ></input>
+      />
       <button type="submit" onClick={() => props.onCitySearch(searchText)}>
         Search
       </button>
