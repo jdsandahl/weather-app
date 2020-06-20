@@ -1,3 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastList renders correctly to match ForecastList snapshot 1`] = `[Function]`;
+exports[`ForecastList renders correctly to match ForecastList snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-list"
+  >
+    <div
+      class="forecast-summary"
+    >
+      <div
+        class="date"
+        data-testid="date-id"
+      >
+        <span>
+          Thu 1st Jan
+        </span>
+      </div>
+      <div
+        class="icon"
+        data-testid="icon-id"
+      >
+        <i
+          class="wi wi-day-storm-showers"
+          name="owm"
+        />
+      </div>
+      <div
+        class="temperature"
+        data-testid="temperature-id"
+      >
+        <span>
+          999°c
+        </span>
+      </div>
+      <div
+        class="description"
+        data-testid="description-id"
+      >
+        <span>
+          date1
+        </span>
+      </div>
+      <button>
+        More Details
+      </button>
+    </div>
+    <div
+      class="forecast-summary"
+    >
+      <div
+        class="date"
+        data-testid="date-id"
+      >
+        <span>
+          Thu 1st Jan
+        </span>
+      </div>
+      <div
+        class="icon"
+        data-testid="icon-id"
+      >
+        <i
+          class="wi wi-day-storm-showers"
+          name="owm"
+        />
+      </div>
+      <div
+        class="temperature"
+        data-testid="temperature-id"
+      >
+        <span>
+          888°c
+        </span>
+      </div>
+      <div
+        class="description"
+        data-testid="description-id"
+      >
+        <span>
+          date2
+        </span>
+      </div>
+      <button>
+        More Details
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
