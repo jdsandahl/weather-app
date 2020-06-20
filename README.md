@@ -1,3 +1,12 @@
+## React Weather-App
+This is a simple weather app built using React. 
+
+**To clone and build yourself:**
+` git clone git@github.com:jdsandahl/weather-app.git`
+
+**To view the hosted project:**
+[https://jdsandahl.github.io/weather-app/](https://jdsandahl.github.io/weather-app/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
