@@ -69,14 +69,14 @@ const App = (props) => {
     return (
       <div className="forecast">
         {error && (
-          <>
+          <div>
             <h2 className="error-message">`{error}`</h2>
             <SearchForm onCitySearch={handleCitySearch} />
-          </>
+          </div>
         )}
 
         {!loading && !error && (
-          <>
+          <div>
             <LocationDetails city={location.city} country={location.country} />
             
             <SearchForm onCitySearch={handleCitySearch} />
@@ -89,7 +89,7 @@ const App = (props) => {
             {selectedForecast && (
               <ForecastDetails forecasts={selectedForecast} />
             )}
-          </>
+          </div>
         )}
       </div>
     );
