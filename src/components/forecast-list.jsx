@@ -6,13 +6,13 @@ import '../styles/forecast-list.css';
 
 const ForecastList = (props) => (
   <div className="forecast-list">
-    {props.forecasts.map((forecast) => (
+    {props.forecasts.map(({ date, description, icon, temperature }) => (
       <ForecastSummary
-        key={forecast.date}
-        date={forecast.date}
-        description={forecast.description}
-        icon={forecast.icon}
-        temperature={forecast.temperature.max}
+        key={date}
+        date={date}
+        description={description}
+        icon={icon}
+        temperature={temperature.max}
         onSelect={props.onForecastSelect}
       />
     ))}
