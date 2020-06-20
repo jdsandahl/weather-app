@@ -65,35 +65,32 @@ const App = (props) => {
         <h1 className="appLoading">Loading the weather...</h1>
       </div>
     );
-  } else {
-    return (
-      <div className="forecast">
-        {error && (
-          <div>
-            <h2 className="error-message">`{error}`</h2>
-            <SearchForm onCitySearch={handleCitySearch} />
-          </div>
-        )}
-
-        {!loading && !error && (
-          <div>
-            <LocationDetails city={location.city} country={location.country} />
-            
-            <SearchForm onCitySearch={handleCitySearch} />
-            
-            <ForecastList
-              forecasts={forecasts}
-              onForecastSelect={handleForecastSelect}
-            />
-
-            {selectedForecast && (
-              <ForecastDetails forecasts={selectedForecast} />
-            )}
-          </div>
-        )}
-      </div>
-    );
   }
+  return (
+    <div className="forecast">
+      {error && (
+        <div>
+          <h2 className="error-message">{error}</h2>
+          <SearchForm onCitySearch={handleCitySearch} />
+        </div>
+      )}
+
+      {!loading && !error && (
+        <div>
+          <LocationDetails city={location.city} country={location.country} />
+
+          <SearchForm onCitySearch={handleCitySearch} />
+
+          <ForecastList
+            forecasts={forecasts}
+            onForecastSelect={handleForecastSelect}
+          />
+
+          {selectedForecast && <ForecastDetails forecasts={selectedForecast} />}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default App;
