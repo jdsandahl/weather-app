@@ -14,3 +14,16 @@ h1, h3 {
 .error-message {
     color: red;
 }
+
+button {
+    background-color: orange;
+    border-radius: 5px;
+    box-shadow: 1px 1px silver;
+}
+
+button:active {
+    background-color: #20232a;
+    box-shadow: 1px 1px #61dafb;
+    border: 1px solid #61dafb;
+    color: orange;   
+}
