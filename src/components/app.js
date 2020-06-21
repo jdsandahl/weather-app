@@ -42,12 +42,17 @@ const App = (props) => {
       })
       .catch((err) => {
         if (err.response) {
-          setLoading(false);
+          // Request made and server responded
           setError(`${err.message}: The city entered was not found`);
+        } else if (err.request) {
+          // Request made but no server response
+          setError(`${err.message}: Server error`);
         } else {
-          setLoading(false);
+          // Request setup error
           setError(err.message);
         }
+
+        setLoading(false);
       });
   };
 
