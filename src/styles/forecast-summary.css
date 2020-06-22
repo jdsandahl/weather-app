@@ -1,0 +1,7 @@
+.forecast-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px;
+    margin: 5px;
+}
