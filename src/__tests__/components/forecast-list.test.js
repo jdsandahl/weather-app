@@ -1,7 +1,6 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
 import ForecastList from '../../components/forecast-list';
-import moment from 'moment';
 
 afterEach(cleanup);
 
@@ -42,14 +41,11 @@ describe("ForecastList", () => {
 
     it("renders the correct dates and in the correct format", () => {
         const { getAllByText } = render (<ForecastList forecasts={ forecasts } />);
-        
-        const testDate1 = moment(123456789).format('ddd Do MMM');
-        const testDate2 = moment(456).format('ddd Do MMM');
 
-        expect(getAllByText(testDate1)).toBeTruthy();
-        expect(getAllByText(testDate1)).toHaveLength(1);
+        expect(getAllByText('Fri 2nd Jan')).toBeTruthy();
+        expect(getAllByText('Fri 2nd Jan')).toHaveLength(1);
 
-        expect(getAllByText(testDate2)).toBeTruthy();
-        expect(getAllByText(testDate2)).toHaveLength(1);
+        expect(getAllByText('Thu 1st Jan')).toBeTruthy();
+        expect(getAllByText('Thu 1st Jan')).toHaveLength(1);
     });
 });
